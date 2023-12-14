@@ -16,7 +16,7 @@ def calculate_distance(latitude1, longitude1, latitude2, longitude2):
 
 def print_result(source_data_array):
     for item in source_data_array:
-        print(f"{item[1]}: {item[2]} km")
+        print(f"{item[0]}: {item[1]} km")
     print("--------------------------------------\n")
 
 
@@ -45,11 +45,10 @@ print("Расстояние от заданной точки (lat=55.751244, lng
 print_result(
     data.rdd.map(
         lambda row: (
-            row["ID"],
             row["Name"],
             calculate_distance(row["Latitude_WGS84"], row["Longitude_WGS84"], target_latitude, target_longitude)
         )
-    ).takeOrdered(10, key=lambda x: x[2])
+    ).take(10)
 )
 
 all_distances = data.rdd.cartesian(data.rdd).filter(
@@ -67,9 +66,9 @@ all_distances = data.rdd.cartesian(data.rdd).filter(
 )
 
 print("Pасстояние между всеми заведениями общепита из набора данных")
-print_result(all_distances.takeOrdered(10, key=lambda x: x[1]))
+print_result(all_distances.take(10))
 
-print("Pасстояние между всеми заведениями общепита из набора данных")
+print("Топ-10 наиболее близких и наиболее отдаленных заведений")
 print_result(
     all_distances.takeOrdered(10, key=lambda x: x[1]) + \
     all_distances.takeOrdered(10, key=lambda x: -x[1])
