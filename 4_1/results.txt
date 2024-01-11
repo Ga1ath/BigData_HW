@@ -1,0 +1,173 @@
+-----------------------------------------------------
+Количество фильмов для жанров Drama, Comedy, Musical:
+genres
+Drama      4361
+Comedy     3756
+Musical     334
+Name: count, dtype: int64
+-----------------------------------------------------
+Первые 10 фильмов с наибольшим средним рейтингом при количестве рейтингов больше 10 для каждого жанра:
+
+Top 10 Drama Films based on Average Ratings (with at least 10 ratings):
+ movieId                                         title  average_rating
+    1041                         Secrets & Lies (1996)        4.590909
+    3451           Guess Who's Coming to Dinner (1967)        4.545455
+    1178                         Paths of Glory (1957)        4.541667
+    1104              Streetcar Named Desire, A (1951)        4.475000
+    2360              Celebration, The (Festen) (1998)        4.458333
+    1217                                    Ran (1985)        4.433333
+     318              Shawshank Redemption, The (1994)        4.429022
+     922 Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)        4.333333
+    3468                           Hustler, The (1961)        4.333333
+    3435                       Double Indemnity (1944)        4.323529
+
+Top 10 Comedy Films based on Average Ratings (with at least 10 ratings):
+ movieId                                                                       title  average_rating
+     951                                                      His Girl Friday (1940)        4.392857
+     905                                                It Happened One Night (1934)        4.321429
+     898                                              Philadelphia Story, The (1940)        4.310345
+     176                                                   Living in Oblivion (1995)        4.307692
+    1235                                                     Harold and Maude (1971)        4.288462
+     750 Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)        4.268041
+    3429                                                    Creature Comforts (1989)        4.250000
+    1197                                                  Princess Bride, The (1987)        4.232394
+     296                                                         Pulp Fiction (1994)        4.197068
+    4973                        Amelie (Fabuleux destin d'Amélie Poulain, Le) (2001)        4.183333
+
+Top 10 Musical Films based on Average Ratings (with at least 10 ratings):
+ movieId                                 title  average_rating
+    4642      Hedwig and the Angry Inch (2000)        4.181818
+    2565                King and I, The (1956)        4.166667
+     899            Singin' in the Rain (1952)        4.074468
+   54190            Across the Universe (2007)        4.045455
+     914                   My Fair Lady (1964)        4.042857
+    3910             Dancer in the Dark (2000)        3.975000
+     364                 Lion King, The (1994)        3.941860
+    1035            Sound of Music, The (1965)        3.937500
+   66934 Dr. Horrible's Sing-Along Blog (2008)        3.916667
+   81847                        Tangled (2010)        3.916667
+-----------------------------------------------------
+Первые 10 фильмов с наименьшим средним рейтингом при количестве рейтингов больше 10 для каждого жанра:
+
+AntiTop 10 Drama Films based on Average Ratings (with at least 10 ratings):
+ movieId                                                                       title  average_rating
+    2422                                            Karate Kid, Part III, The (1989)        1.750000
+    6793                                                            Beethoven (1992)        1.772727
+    2412                                                              Rocky V (1990)        1.941176
+   46335 Fast and the Furious: Tokyo Drift, The (Fast and the Furious 3, The) (2006)        2.090909
+    1515                                                              Volcano (1997)        2.100000
+    4254                                      Crocodile Dundee in Los Angeles (2001)        2.192308
+   76175                                                  Clash of the Titans (2010)        2.307692
+     455                                                           Free Willy (1993)        2.391892
+     519                                                            RoboCop 3 (1993)        2.404762
+    3824                                                   Autumn in New York (2000)        2.409091
+
+AntiTop 10 Comedy Films based on Average Ratings (with at least 10 ratings):
+ movieId                                          title  average_rating
+    2798                           Problem Child (1990)        1.583333
+    3564     Flintstones in Viva Rock Vegas, The (2000)        1.625000
+    3268              Stop! Or My Mom Will Shoot (1992)        1.772727
+    6793                               Beethoven (1992)        1.772727
+    3997                      Dungeons & Dragons (2000)        1.833333
+    3248         Sister Act 2: Back in the Habit (1993)        1.892857
+    6482 Dumb and Dumberer: When Harry Met Lloyd (2003)        1.954545
+     546                       Super Mario Bros. (1993)        2.000000
+    2053                Honey, I Blew Up the Kid (1992)        2.050000
+    3440        Teenage Mutant Ninja Turtles III (1993)        2.071429
+
+AntiTop 10 Musical Films based on Average Ratings (with at least 10 ratings):
+ movieId                                  title  average_rating
+    1381                        Grease 2 (1982)        2.078947
+    2088                          Popeye (1980)        2.500000
+    1772             Blues Brothers 2000 (1998)        2.708333
+    1030                   Pete's Dragon (1977)        2.766667
+   60397                      Mamma Mia! (2008)        2.964286
+     709                Oliver & Company (1988)        3.090909
+    4039                           Annie (1982)        3.125000
+    1380                          Grease (1978)        3.139706
+      48                      Pocahontas (1995)        3.147059
+    1064 Aladdin and the King of Thieves (1996)        3.153846
+-----------------------------------------------------
+Первые 10 фильмов с наибольшим количеством рейтингов для каждого жанра:
+
+Top 10 Drama Films with the Most Ratings:
+ movieId                            title  num_ratings
+     356              Forrest Gump (1994)          329
+     318 Shawshank Redemption, The (1994)          317
+     296              Pulp Fiction (1994)          307
+     110                Braveheart (1995)          237
+     527          Schindler's List (1993)          220
+    2959                Fight Club (1999)          218
+    2858           American Beauty (1999)          204
+     150                 Apollo 13 (1995)          201
+     858            Godfather, The (1972)          192
+    2028       Saving Private Ryan (1998)          188
+
+Top 10 Comedy Films with the Most Ratings:
+ movieId                             title  num_ratings
+     356               Forrest Gump (1994)          329
+     296               Pulp Fiction (1994)          307
+       1                  Toy Story (1995)          215
+     588                    Aladdin (1992)          183
+     608                      Fargo (1996)          181
+     380                  True Lies (1994)          178
+    1270         Back to the Future (1985)          171
+    4306                      Shrek (2001)          170
+    1580  Men in Black (a.k.a. MIB) (1997)          165
+     344 Ace Ventura: Pet Detective (1994)          161
+
+Top 10 Musical Films with the Most Ratings:
+ movieId                                       title  num_ratings
+     588                              Aladdin (1992)          183
+     364                       Lion King, The (1994)          172
+     595                 Beauty and the Beast (1991)          146
+    1073  Willy Wonka & the Chocolate Factory (1971)          119
+     551      Nightmare Before Christmas, The (1993)           93
+     919                    Wizard of Oz, The (1939)           92
+    8360                              Shrek 2 (2004)           92
+    1220                  Blues Brothers, The (1980)           84
+     594      Snow White and the Seven Dwarfs (1937)           77
+    2700 South Park: Bigger, Longer and Uncut (1999)           76
+-----------------------------------------------------
+Первые 10 фильмов с наименьшим количеством рейтингов для каждого жанра:
+
+AntiTop 10 Drama Films with the Least Ratings:
+ movieId                                           title  num_ratings
+      28                               Persuasion (1995)           11
+     381                 When a Man Loves a Woman (1994)           11
+     640                               Diabolique (1996)           11
+     694                          Substitute, The (1996)           11
+     965                            39 Steps, The (1935)           11
+     991                          Michael Collins (1996)           11
+     994                                Big Night (1996)           11
+    1041                           Secrets & Lies (1996)           11
+    1131                         Jean de Florette (1986)           11
+    1173 Cook the Thief His Wife & Her Lover, The (1989)           11
+
+AntiTop 10 Comedy Films with the Least Ratings:
+ movieId                                           title  num_ratings
+     157                           Canadian Bacon (1995)           11
+     489                          Made in America (1993)           11
+     709                         Oliver & Company (1988)           11
+     801                          Harriet the Spy (1996)           11
+     994                                Big Night (1996)           11
+    1078                                  Bananas (1971)           11
+    1173 Cook the Thief His Wife & Her Lover, The (1989)           11
+    1194           Cheech and Chong's Up in Smoke (1978)           11
+    1273                              Down by Law (1986)           11
+    1474   Jungle2Jungle (a.k.a. Jungle 2 Jungle) (1997)           11
+
+AntiTop 10 Musical Films with the Least Ratings:
+ movieId                                  title  num_ratings
+     631         All Dogs Go to Heaven 2 (1996)           11
+     709                Oliver & Company (1988)           11
+    2135                 Doctor Dolittle (1967)           11
+    4642       Hedwig and the Angry Inch (2000)           11
+    7247         Chitty Chitty Bang Bang (1968)           11
+   52435 How the Grinch Stole Christmas! (1966)           11
+   54190             Across the Universe (2007)           11
+     900           American in Paris, An (1951)           12
+    1081                 Victor/Victoria (1982)           12
+    1416                           Evita (1996)           12
+
+Process finished with exit code 0
