@@ -1,0 +1,17 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/14 13:56:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/usr/local/lib/python3.6/dist-packages/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+-----------------------------------------------------
+Среднее значение рейтинга в обучающем подмножестве: 3.5039340762987417
+-----------------------------------------------------
+RMSE для тестового подмножества, если для всех значений из test предсказывается среднее значение рейтинга: 1.050437770717009
+-----------------------------------------------------
+RMSE для тестового подмножества для коллаборативной фильтрации по схожести объектов: 0.9199688895036819
+24/01/14 13:56:30 WARN InstanceBuilder$NativeBLAS: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+24/01/14 13:56:30 WARN InstanceBuilder$NativeBLAS: Failed to load implementation from:dev.ludovic.netlib.blas.ForeignLinkerBLAS
+24/01/14 13:56:30 WARN InstanceBuilder$NativeLAPACK: Failed to load implementation from:dev.ludovic.netlib.lapack.JNILAPACK
+-----------------------------------------------------
+RMSE для тестового подмножества для факторизации матрицы рейтингов c помощью ALS: 0.8794846166759744
