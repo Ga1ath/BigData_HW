@@ -1,0 +1,239 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/01/14 11:52:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/usr/local/lib/python3.6/dist-packages/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+-----------------------------------------------------
+Количество фильмов для жанров Drama, Comedy, Musical:
++-------+-----+
+|  genre|count|
++-------+-----+
+|  Drama| 4361|
+| Comedy| 3756|
+|Musical|  334|
++-------+-----+
+
+-----------------------------------------------------
+Первые 10 фильмов с наибольшим средним рейтингом при количестве рейтингов больше 10 для каждого жанра:
+
+Top 10 Drama films based on Average Ratings (with at least 10 ratings):
++-------+---------------------------------------------+-----------------+
+|movieId|title                                        |average_rating   |
++-------+---------------------------------------------+-----------------+
+|1041   |Secrets & Lies (1996)                        |4.590909090909091|
+|3451   |Guess Who's Coming to Dinner (1967)          |4.545454545454546|
+|1178   |Paths of Glory (1957)                        |4.541666666666667|
+|1104   |Streetcar Named Desire, A (1951)             |4.475            |
+|2360   |Celebration, The (Festen) (1998)             |4.458333333333333|
+|1217   |Ran (1985)                                   |4.433333333333334|
+|318    |Shawshank Redemption, The (1994)             |4.429022082018927|
+|922    |Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)|4.333333333333333|
+|3468   |Hustler, The (1961)                          |4.333333333333333|
+|3435   |Double Indemnity (1944)                      |4.323529411764706|
++-------+---------------------------------------------+-----------------+
+only showing top 10 rows
+
+
+Top 10 Comedy films based on Average Ratings (with at least 10 ratings):
++-------+---------------------------------------------------------------------------+------------------+
+|movieId|title                                                                      |average_rating    |
++-------+---------------------------------------------------------------------------+------------------+
+|951    |His Girl Friday (1940)                                                     |4.392857142857143 |
+|905    |It Happened One Night (1934)                                               |4.321428571428571 |
+|898    |Philadelphia Story, The (1940)                                             |4.310344827586207 |
+|176    |Living in Oblivion (1995)                                                  |4.3076923076923075|
+|1235   |Harold and Maude (1971)                                                    |4.288461538461538 |
+|750    |Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)|4.268041237113402 |
+|3429   |Creature Comforts (1989)                                                   |4.25              |
+|1197   |Princess Bride, The (1987)                                                 |4.232394366197183 |
+|296    |Pulp Fiction (1994)                                                        |4.197068403908795 |
+|4973   |Amelie (Fabuleux destin d'Amélie Poulain, Le) (2001)                       |4.183333333333334 |
++-------+---------------------------------------------------------------------------+------------------+
+only showing top 10 rows
+
+
+Top 10 Musical films based on Average Ratings (with at least 10 ratings):
++-------+-------------------------------------+------------------+
+|movieId|title                                |average_rating    |
++-------+-------------------------------------+------------------+
+|4642   |Hedwig and the Angry Inch (2000)     |4.181818181818182 |
+|2565   |King and I, The (1956)               |4.166666666666667 |
+|899    |Singin' in the Rain (1952)           |4.074468085106383 |
+|54190  |Across the Universe (2007)           |4.045454545454546 |
+|914    |My Fair Lady (1964)                  |4.042857142857143 |
+|3910   |Dancer in the Dark (2000)            |3.975             |
+|364    |Lion King, The (1994)                |3.941860465116279 |
+|1035   |Sound of Music, The (1965)           |3.9375            |
+|81847  |Tangled (2010)                       |3.9166666666666665|
+|66934  |Dr. Horrible's Sing-Along Blog (2008)|3.9166666666666665|
++-------+-------------------------------------+------------------+
+only showing top 10 rows
+
+-----------------------------------------------------
+Первые 10 фильмов с наименьшим средним рейтингом при количестве рейтингов больше 10 для каждого жанра:
+
+Top 10 Drama films based on Average Ratings (with at least 10 ratings):
++-------+---------------------------------------------------------------------------+------------------+
+|movieId|title                                                                      |average_rating    |
++-------+---------------------------------------------------------------------------+------------------+
+|2422   |Karate Kid, Part III, The (1989)                                           |1.75              |
+|6793   |Beethoven (1992)                                                           |1.7727272727272727|
+|2412   |Rocky V (1990)                                                             |1.9411764705882353|
+|46335  |Fast and the Furious: Tokyo Drift, The (Fast and the Furious 3, The) (2006)|2.090909090909091 |
+|1515   |Volcano (1997)                                                             |2.1               |
+|4254   |Crocodile Dundee in Los Angeles (2001)                                     |2.1923076923076925|
+|76175  |Clash of the Titans (2010)                                                 |2.3076923076923075|
+|455    |Free Willy (1993)                                                          |2.391891891891892 |
+|519    |RoboCop 3 (1993)                                                           |2.4047619047619047|
+|3824   |Autumn in New York (2000)                                                  |2.409090909090909 |
++-------+---------------------------------------------------------------------------+------------------+
+only showing top 10 rows
+
+
+Top 10 Comedy films based on Average Ratings (with at least 10 ratings):
++-------+----------------------------------------------+------------------+
+|movieId|title                                         |average_rating    |
++-------+----------------------------------------------+------------------+
+|2798   |Problem Child (1990)                          |1.5833333333333333|
+|3564   |Flintstones in Viva Rock Vegas, The (2000)    |1.625             |
+|6793   |Beethoven (1992)                              |1.7727272727272727|
+|3268   |Stop! Or My Mom Will Shoot (1992)             |1.7727272727272727|
+|3997   |Dungeons & Dragons (2000)                     |1.8333333333333333|
+|3248   |Sister Act 2: Back in the Habit (1993)        |1.8928571428571428|
+|6482   |Dumb and Dumberer: When Harry Met Lloyd (2003)|1.9545454545454546|
+|546    |Super Mario Bros. (1993)                      |2.0               |
+|2053   |Honey, I Blew Up the Kid (1992)               |2.05              |
+|3440   |Teenage Mutant Ninja Turtles III (1993)       |2.0714285714285716|
++-------+----------------------------------------------+------------------+
+only showing top 10 rows
+
+
+Top 10 Musical films based on Average Ratings (with at least 10 ratings):
++-------+--------------------------------------+------------------+
+|movieId|title                                 |average_rating    |
++-------+--------------------------------------+------------------+
+|1381   |Grease 2 (1982)                       |2.0789473684210527|
+|2088   |Popeye (1980)                         |2.5               |
+|1772   |Blues Brothers 2000 (1998)            |2.7083333333333335|
+|1030   |Pete's Dragon (1977)                  |2.7666666666666666|
+|60397  |Mamma Mia! (2008)                     |2.9642857142857144|
+|709    |Oliver & Company (1988)               |3.090909090909091 |
+|4039   |Annie (1982)                          |3.125             |
+|1380   |Grease (1978)                         |3.139705882352941 |
+|48     |Pocahontas (1995)                     |3.1470588235294117|
+|1064   |Aladdin and the King of Thieves (1996)|3.1538461538461537|
++-------+--------------------------------------+------------------+
+only showing top 10 rows
+
+-----------------------------------------------------
+Первые 10 фильмов с наибольшим количеством рейтингов для каждого жанра:
+
+Top 10 Drama films with the most ratings (with at least 10 ratings):
++-------+--------------------------------+-----------+
+|movieId|title                           |num_ratings|
++-------+--------------------------------+-----------+
+|356    |Forrest Gump (1994)             |329        |
+|318    |Shawshank Redemption, The (1994)|317        |
+|296    |Pulp Fiction (1994)             |307        |
+|110    |Braveheart (1995)               |237        |
+|527    |Schindler's List (1993)         |220        |
+|2959   |Fight Club (1999)               |218        |
+|2858   |American Beauty (1999)          |204        |
+|150    |Apollo 13 (1995)                |201        |
+|858    |Godfather, The (1972)           |192        |
+|2028   |Saving Private Ryan (1998)      |188        |
++-------+--------------------------------+-----------+
+only showing top 10 rows
+
+
+Top 10 Comedy films with the most ratings (with at least 10 ratings):
++-------+---------------------------------+-----------+
+|movieId|title                            |num_ratings|
++-------+---------------------------------+-----------+
+|356    |Forrest Gump (1994)              |329        |
+|296    |Pulp Fiction (1994)              |307        |
+|1      |Toy Story (1995)                 |215        |
+|588    |Aladdin (1992)                   |183        |
+|608    |Fargo (1996)                     |181        |
+|380    |True Lies (1994)                 |178        |
+|1270   |Back to the Future (1985)        |171        |
+|4306   |Shrek (2001)                     |170        |
+|1580   |Men in Black (a.k.a. MIB) (1997) |165        |
+|344    |Ace Ventura: Pet Detective (1994)|161        |
++-------+---------------------------------+-----------+
+only showing top 10 rows
+
+
+Top 10 Musical films with the most ratings (with at least 10 ratings):
++-------+-------------------------------------------+-----------+
+|movieId|title                                      |num_ratings|
++-------+-------------------------------------------+-----------+
+|588    |Aladdin (1992)                             |183        |
+|364    |Lion King, The (1994)                      |172        |
+|595    |Beauty and the Beast (1991)                |146        |
+|1073   |Willy Wonka & the Chocolate Factory (1971) |119        |
+|551    |Nightmare Before Christmas, The (1993)     |93         |
+|8360   |Shrek 2 (2004)                             |92         |
+|919    |Wizard of Oz, The (1939)                   |92         |
+|1220   |Blues Brothers, The (1980)                 |84         |
+|594    |Snow White and the Seven Dwarfs (1937)     |77         |
+|2700   |South Park: Bigger, Longer and Uncut (1999)|76         |
++-------+-------------------------------------------+-----------+
+only showing top 10 rows
+
+-----------------------------------------------------
+Первые 10 фильмов с наименьшим количеством рейтингов для каждого жанра:
+
+Top 10 Drama films with the least ratings (with at least 10 ratings):
++-------+-----------------------------------------------+-----------+
+|movieId|title                                          |num_ratings|
++-------+-----------------------------------------------+-----------+
+|1480   |Smilla's Sense of Snow (1997)                  |11         |
+|1735   |Great Expectations (1998)                      |11         |
+|45501  |Break-Up, The (2006)                           |11         |
+|48783  |Flags of Our Fathers (2006)                    |11         |
+|1483   |Crash (1996)                                   |11         |
+|1273   |Down by Law (1986)                             |11         |
+|55442  |Persepolis (2007)                              |11         |
+|27808  |Spanglish (2004)                               |11         |
+|1173   |Cook the Thief His Wife & Her Lover, The (1989)|11         |
+|3035   |Mister Roberts (1955)                          |11         |
++-------+-----------------------------------------------+-----------+
+only showing top 10 rows
+
+
+Top 10 Comedy films with the least ratings (with at least 10 ratings):
++-------+----------------------------------------------+-----------+
+|movieId|title                                         |num_ratings|
++-------+----------------------------------------------+-----------+
+|2926   |Hairspray (1988)                              |11         |
+|66203  |He's Just Not That Into You (2009)            |11         |
+|709    |Oliver & Company (1988)                       |11         |
+|3359   |Breaking Away (1979)                          |11         |
+|1273   |Down by Law (1986)                            |11         |
+|89904  |The Artist (2011)                             |11         |
+|45501  |Break-Up, The (2006)                          |11         |
+|6482   |Dumb and Dumberer: When Harry Met Lloyd (2003)|11         |
+|7046   |Witches of Eastwick, The (1987)               |11         |
+|3784   |Kid, The (2000)                               |11         |
++-------+----------------------------------------------+-----------+
+only showing top 10 rows
+
+
+Top 10 Musical films with the least ratings (with at least 10 ratings):
++-------+--------------------------------------+-----------+
+|movieId|title                                 |num_ratings|
++-------+--------------------------------------+-----------+
+|2135   |Doctor Dolittle (1967)                |11         |
+|631    |All Dogs Go to Heaven 2 (1996)        |11         |
+|7247   |Chitty Chitty Bang Bang (1968)        |11         |
+|54190  |Across the Universe (2007)            |11         |
+|709    |Oliver & Company (1988)               |11         |
+|52435  |How the Grinch Stole Christmas! (1966)|11         |
+|4642   |Hedwig and the Angry Inch (2000)      |11         |
+|30816  |Phantom of the Opera, The (2004)      |12         |
+|900    |American in Paris, An (1951)          |12         |
+|2565   |King and I, The (1956)                |12         |
++-------+--------------------------------------+-----------+
+only showing top 10 rows
